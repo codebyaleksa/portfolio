@@ -622,3 +622,29 @@ body.light-mode footer {
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #themeToggle,
+  #langSelect {
+    margin-left: 0;
+  }
+}
