@@ -628,25 +628,45 @@ body.light-mode footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 12px;
+    padding: 15px 10px;
   }
 
   .logo {
-    margin-left: 0;
-    font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.6rem;
   }
 
   nav ul {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     padding: 0;
     margin: 0;
   }
 
+  nav ul li a {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
   #themeToggle,
   #langSelect {
-    margin-left: 0;
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+
+  #langSelect {
+    min-width: 110px;
   }
 }
