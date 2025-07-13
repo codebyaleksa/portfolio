@@ -846,3 +846,16 @@ body.light-mode footer {
     display: flex;
   }
 }
+
+body.light-mode #navLinks {
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+}
+
+body.light-mode #navLinks a {
+  color: #222;
+}
+
+body.light-mode #navLinks a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
