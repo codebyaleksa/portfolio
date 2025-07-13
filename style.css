@@ -643,3 +643,35 @@ body.light-mode footer {
     min-width: 90px;
   }
 }
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 4px; /* još manji razmak */
+  }
+
+  nav ul li a {
+    padding: 3px 5px;
+    font-size: 0.78rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  #themeToggle,
+  #langSelect {
+    padding: 4px 6px;
+    font-size: 0.78rem;
+  }
+
+  #langSelect {
+    min-width: 80px;
+  }
+
+  .controls {
+    gap: 6px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
