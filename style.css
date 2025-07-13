@@ -795,7 +795,7 @@ body.light-mode footer {
   font-size: 1.8rem;
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   display: none;
   position: absolute;
@@ -848,7 +848,7 @@ body.light-mode footer {
 }
 
 body.light-mode #navLinks {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(59, 59, 59, 0.95);
   color: #ffffff;
 }
 
@@ -860,6 +860,3 @@ body.light-mode #navLinks a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.dugme {
-  background-color: #111;
-}
