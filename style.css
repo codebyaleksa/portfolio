@@ -859,3 +859,7 @@ body.light-mode #navLinks a {
 body.light-mode #navLinks a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+body.light-mode .menu-toggle span {
+  background-color: #111;
+}
