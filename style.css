@@ -681,3 +681,40 @@ body.light-mode footer {
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo-controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #themeToggle {
+    order: -1; /* Pomera tamni/svetli režim levo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+}
