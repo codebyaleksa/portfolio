@@ -269,3 +269,5 @@ form.addEventListener('submit', () => {
   }, 100); // mala pauza da submit stigne pre reseta
 });
 
+
+
