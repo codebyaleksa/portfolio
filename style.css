@@ -596,32 +596,6 @@ body.light-mode footer {
   }
 }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 10px 24px;
-    font-size: 1rem;
-  }
-
-  .section h2 {
-    font-size: 2rem;
-  }
-
-  .contact-item span {
-    font-size: 0.95rem;
-  }
-
-  .contact-item i {
-    font-size: 1.6rem;
-  }
-}
 
 @media (max-width: 768px) {
   nav {
