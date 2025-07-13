@@ -740,8 +740,8 @@ body.light-mode footer {
 
   #langSelect {
     position: absolute;
-    top: 8px;
-    right: 30px;
+    top: 4px;
+    right: 50px;
     margin: 0;
   }
 
