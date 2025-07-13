@@ -675,3 +675,9 @@ body.light-mode footer {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  label[for="langSelect"] {
+    display: none;
+  }
+}
