@@ -270,4 +270,12 @@ form.addEventListener('submit', () => {
 });
 
 
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  });
+
+
+
+
 
