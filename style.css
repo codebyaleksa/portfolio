@@ -860,6 +860,6 @@ body.light-mode #navLinks a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode .menu-toggle span {
+.dugme {
   background-color: #111;
 }
