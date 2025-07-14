@@ -853,7 +853,7 @@ body.light-mode #navLinks {
 }
 
 body.light-mode #navLinks a {
-  color: #ffffff;
+  color: #000000;
 }
 
 body.light-mode #navLinks a:hover {
