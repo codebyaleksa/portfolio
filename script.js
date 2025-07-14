@@ -270,57 +270,6 @@ form.addEventListener('submit', () => {
 });
 
 
-  document.getElementById("menuToggle").addEventListener("click", function () {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-  });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-  const nav = document.querySelector("nav");
-
-  // Hamburger linije kao spanovi
-  menuToggle.innerHTML = `
-    <div class="hamburger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  `;
-
-  const hamburgerIcon = menuToggle.querySelector(".hamburger-icon");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    hamburgerIcon.classList.toggle("active");
-    nav.classList.toggle("opened");
-  });
-
-  // Automatsko zatvaranje menija kad se klikne na link
-  const navItems = navLinks.querySelectorAll("a");
-  navItems.forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-      hamburgerIcon.classList.remove("active");
-      nav.classList.remove("opened");
-    });
-  });
-
-  // Tema toggle
-  const themeToggle = document.getElementById("themeToggle");
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    document.body.classList.toggle("dark-mode");
-  });
-
-  // AOS animacije
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-});
-
 
 
 
