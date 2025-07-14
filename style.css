@@ -791,11 +791,24 @@ body.light-mode footer {
   }
 }
 
-#menuToggle {
+body.light-mode #menuToggle {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+}
+
+body.dark-mode #menuToggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   display: none;
   position: absolute;
