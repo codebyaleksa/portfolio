@@ -906,6 +906,8 @@ body.dark-mode #menuToggle {
   color: var(--hamburger-color, #000);
   cursor: pointer;
   z-index: 1100;
+  position: fixed;
+  top: 30px;
 }
 
 /* Prilagoditi za tamni mod */
