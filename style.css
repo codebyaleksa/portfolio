@@ -941,3 +941,30 @@ body.dark-mode {
   --nav-bg: #111111;
   --hamburger-color: #fff;
 }
+
+#navLinks li {
+  list-style: none;
+}
+
+#navLinks li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--text-color, #000);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #navLinks li a {
+  --text-color: #fff;
+}
+
+#navLinks li a:hover {
+  transform: translateX(5px);
+  color: var(--accent-color, #ff5722);
+}
+
+#navLinks li a i {
+  font-size: 1.4rem;
+}
