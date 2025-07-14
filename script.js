@@ -276,21 +276,6 @@ form.addEventListener('submit', () => {
   });
 
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const navContainer = document.querySelector("nav");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-  navContainer.classList.toggle("opened");
-
-  // Automatski skrol na vrh kada se otvori meni
-  if (navLinks.classList.contains("show")) {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  // Menjanje ikonice (hamburger <-> X)
-  menuToggle.innerHTML = navLinks.classList.contains("show") ? "&times;" : "&#9776;";
-});
 
 
