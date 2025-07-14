@@ -276,6 +276,16 @@ form.addEventListener('submit', () => {
   });
 
 
+document.getElementById("menuToggle").addEventListener("click", function () {
+  const nav = document.getElementById("navLinks");
+  const navContainer = document.querySelector("nav");
 
+  nav.classList.toggle("show");
+  navContainer.classList.toggle("opened"); // Dodajemo/uklanjamo klasu "opened"
+});
+
+if (nav.classList.contains("show")) {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 
