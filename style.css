@@ -871,30 +871,44 @@ body.dark-mode #menuToggle {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  #navLinks {
-    display: none;
-    flex-direction: column;
-    background-color: var(--bg-color, #111);
-    padding: 1rem;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-  }
-
-  #navLinks.active {
-    display: flex;
-  }
+/* NAVIGATION BASE */
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centriraj logo */
+  height: 60px;
+  background-color: var(--bg-color, #111);
+  padding: 0 1rem;
 }
 
-/* Mobilni bočni meni */
+/* Hamburger dugme */
+#menuToggle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Logo centriran */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1001;
+}
+
+/* Mobilni bočni meni s leve strane */
 #navLinks {
   position: fixed;
   top: 0;
-  left: -250px; /* skriveno izvan leve ivice */
+  left: -250px;
   width: 250px;
   height: 100vh;
   background-color: var(--bg-color, #111);
@@ -914,22 +928,19 @@ body.dark-mode #menuToggle {
 }
 
 #navLinks.active {
-  left: 0; /* pomeri u vidljivi deo */
+  left: 0;
 }
 
-/* Dugme vidljivo samo na mobilnim uređajima */
-#menuToggle {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
-  position: relative;
-}
-
-/* Desktop prikaz - normalno u redu */
+/* Desktop prikaz */
 @media (min-width: 769px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
   #navLinks {
     position: static;
     height: auto;
@@ -937,9 +948,11 @@ body.dark-mode #menuToggle {
     background: none;
     left: 0;
     display: flex;
+    padding: 0;
   }
 
-  #menuToggle {
-    display: none;
+  #navLinks a {
+    color: white;
+    margin-left: 1rem;
   }
 }
