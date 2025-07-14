@@ -848,7 +848,7 @@ body.light-mode footer {
 }
 
 body.light-mode #navLinks {
-  background: rgba(59, 59, 59, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   color: #ffffff;
 }
 
