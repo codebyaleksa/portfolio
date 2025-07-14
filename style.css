@@ -791,7 +791,7 @@ body.light-mode footer {
   }
 }
 
-body.light-mode #menuToggle {
+ #menuToggle {
   font-size: 1.8rem;
   background: none;
   border: none;
@@ -804,18 +804,6 @@ body.light-mode #menuToggle {
   z-index: 1001;
 }
 
-body.dark-mode #menuToggle {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  z-index: 1001;
-}
 
 @media (max-width: 768px) {
   nav {
@@ -873,3 +861,12 @@ body.light-mode #navLinks a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Svetli mod - crna ikona */
+body.light-mode #menuToggle {
+  color: #000;
+}
+
+/* Tamni mod - bela ikona */
+body.dark-mode #menuToggle {
+  color: #fff;
+}
