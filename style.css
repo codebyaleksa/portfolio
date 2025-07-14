@@ -970,3 +970,23 @@ body.dark-mode #navLinks li a {
 #navLinks li a i {
   font-size: 1.4rem;
 }
+
+/* Po defaultu dugme je normalno pozicionirano */
+#menuToggle {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--icon-color, #000);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+/* Kada je meni otvoren, dugme postaje fiksirano */
+#navLinks.show ~ .controls #menuToggle,
+#navLinks.show ~ #menuToggle,
+nav.opened #menuToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
