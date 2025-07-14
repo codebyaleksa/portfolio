@@ -269,12 +269,13 @@ form.addEventListener('submit', () => {
   }, 100); // mala pauza da submit stigne pre reseta
 });
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuToggle = document.getElementById("menuToggle"); // ispravljen selektor
 const navLinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
 
 
 
