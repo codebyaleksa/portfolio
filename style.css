@@ -1206,3 +1206,9 @@ body.dark-mode #navLinks a {
     color: #fff;
   }
 }
+
+@media (max-width: 768px) {
+  .controls {
+    display: none;
+  }
+}
