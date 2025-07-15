@@ -871,22 +871,3 @@ body.dark-mode #menuToggle {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  #navLinks {
-    display: none;
-    flex-direction: column;
-    background-color: var(--bg-color, #111);
-    padding: 1rem;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-  }
-
-  #navLinks.active {
-    display: flex;
-  }
-}
-
