@@ -985,7 +985,7 @@ body.dark-mode #navLinks a {
   /* Meni sakriven po defaultu */
 #navLinks {
   position: fixed;
-  top: 0;
+  top: -25px;
   left: -100%;
   width: 250px;
   height: 100%;
