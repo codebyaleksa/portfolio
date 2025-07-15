@@ -871,3 +871,44 @@ body.dark-mode #menuToggle {
   color: #fff;
 }
 
+/* Slide meni */
+#navLinks {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bg-color, #111);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+#navLinks a {
+  color: var(--text-color, #fff);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#navLinks.active {
+  left: 0;
+}
+
+/* Overlay za zatamnjenu pozadinu */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+#overlay.active {
+  display: block;
+}
