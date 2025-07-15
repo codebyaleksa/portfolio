@@ -912,3 +912,13 @@ body.dark-mode #menuToggle {
 #overlay.active {
   display: block;
 }
+
+body.dark-mode {
+  --bg-color: #111;
+  --text-color: #fff;
+}
+
+body.light-mode {
+  --bg-color: #fff;
+  --text-color: #000;
+}
