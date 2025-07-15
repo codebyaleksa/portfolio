@@ -1163,3 +1163,46 @@ body.dark-mode #navLinks a {
     display: none;
   }
 }
+/* Po difoltu desktop kontrole prikazane, mobilne skrivene */
+.desktop-only {
+  display: flex;
+}
+.mobile-only {
+  display: none;
+}
+
+/* Na mobilnim uređajima zameni prikaz */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .menu-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .menu-controls select,
+  .menu-controls button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
+    color: #000;
+  }
+
+  body.dark-mode .menu-controls select,
+  body.dark-mode .menu-controls button {
+    background-color: #333;
+    color: #fff;
+  }
+}
