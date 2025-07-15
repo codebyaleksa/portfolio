@@ -293,6 +293,19 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// Kada se klikne na bilo koji link u mobilnom meniju – zatvori meni
+const navLinkItems = document.querySelectorAll("#navLinks a");
+
+navLinkItems.forEach(link => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 768) {
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
+      menuToggle.classList.remove("hidden");
+    }
+  });
+});
+
 
 
 
