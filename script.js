@@ -269,11 +269,20 @@ form.addEventListener('submit', () => {
   }, 100); // mala pauza da submit stigne pre reseta
 });
 
-const menuToggle = document.getElementById("menuToggle"); // ispravljen selektor
+
+
+const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const overlay = document.getElementById("overlay");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 

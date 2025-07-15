@@ -917,3 +917,61 @@ body.dark-mode #menuToggle {
   text-decoration: none;
   font-size: 1.2rem;
 }
+/* Overlay (providna siva preko ekrana kada je meni otvoren) */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* univerzalna siva za oba moda */
+  z-index: 90;
+  display: none;
+}
+#overlay.active {
+  display: block;
+}
+
+/* Slide meni - pozicija i animacija */
+#navLinks {
+  position: fixed;
+  top: 0;
+  left: -260px; /* skriven s leva */
+  width: 250px;
+  height: 100vh;
+  padding-top: 60px;
+  padding-left: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* svetli mod default */
+  transition: left 0.3s ease;
+}
+
+/* Dark mode meni pozadina */
+body.dark-mode #navLinks {
+  background-color: #111;
+}
+
+/* Kad je aktivan, pomeri u prikaz */
+#navLinks.active {
+  left: 0;
+}
+
+/* Linkovi u meniju */
+#navLinks li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+#navLinks a {
+  color: #000; /* svetli mod tekst */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Dark mode tekst */
+body.dark-mode #navLinks a {
+  color: #fff;
+}
