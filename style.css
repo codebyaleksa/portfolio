@@ -1100,3 +1100,66 @@ body.dark-mode #navLinks a {
   }
 }
 
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+
+/* Side meni */
+@media (max-width: 768px) {
+  #navLinks {
+    position: fixed;
+    top: 0;
+    left: -250px; /* izvan ekrana */
+    height: 100%;
+    width: 250px;
+    background-color: var(--nav-bg, #fff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease;
+    z-index: 100;
+  }
+
+  #navLinks.active {
+    left: 0;
+  }
+
+  #overlay.active {
+    display: block;
+  }
+
+  #navLinks li {
+    text-align: left;
+    width: 100%;
+  }
+
+  #navLinks a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #navLinks a i {
+    font-size: 1.4rem;
+  }
+
+  /* Skrivanje hamburger dugmeta kad je meni aktivan */
+  #menuToggle.hidden {
+    display: none;
+  }
+}

@@ -269,48 +269,29 @@ form.addEventListener('submit', () => {
   }, 100); // mala pauza da submit stigne pre reseta
 });
 
-
-
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const overlay = document.getElementById("overlay");
 
+// Otvaranje i zatvaranje menija
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   overlay.classList.toggle("active");
-
-  if (window.innerWidth < 768) {
-    menuToggle.classList.toggle("hidden");
-  }
+  menuToggle.classList.toggle("hidden");
 });
 
+// Zatvori meni kad klikneš na overlay
 overlay.addEventListener("click", () => {
   navLinks.classList.remove("active");
   overlay.classList.remove("active");
-
-  if (window.innerWidth < 768) {
-    menuToggle.classList.remove("hidden");
-  }
+  menuToggle.classList.remove("hidden");
 });
 
-// Kada se klikne na bilo koji link u mobilnom meniju – zatvori meni
-const navLinkItems = document.querySelectorAll("#navLinks a");
-
-navLinkItems.forEach(link => {
+// Zatvori meni kad klikneš na neki link u meniju
+document.querySelectorAll("#navLinks a").forEach(link => {
   link.addEventListener("click", () => {
-    if (window.innerWidth < 768) {
-      navLinks.classList.remove("active");
-      overlay.classList.remove("active");
-      menuToggle.classList.remove("hidden");
-    }
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    menuToggle.classList.remove("hidden");
   });
 });
-
-
-
-
-
-
-
-
-
