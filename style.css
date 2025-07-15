@@ -871,44 +871,30 @@ body.dark-mode #menuToggle {
   color: #fff;
 }
 
-/* NAVIGATION BASE */
-nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centriraj logo */
-  height: 60px;
-  background-color: var(--bg-color, #111);
-  padding: 0 1rem;
+@media (max-width: 768px) {
+  #navLinks {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-color, #111);
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+  }
+
+  #navLinks.active {
+    display: flex;
+  }
 }
 
-/* Hamburger dugme */
-#menuToggle {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-/* Logo centriran */
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  z-index: 1001;
-}
-
-/* Mobilni bočni meni s leve strane */
+/* Mobilni bočni meni */
 #navLinks {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -250px; /* skriveno izvan leve ivice */
   width: 250px;
   height: 100vh;
   background-color: var(--bg-color, #111);
@@ -928,19 +914,22 @@ nav {
 }
 
 #navLinks.active {
-  left: 0;
+  left: 0; /* pomeri u vidljivi deo */
 }
 
-/* Desktop prikaz */
+/* Dugme vidljivo samo na mobilnim uređajima */
+#menuToggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  position: relative;
+}
+
+/* Desktop prikaz - normalno u redu */
 @media (min-width: 769px) {
-  nav {
-    justify-content: space-between;
-  }
-
-  #menuToggle {
-    display: none;
-  }
-
   #navLinks {
     position: static;
     height: auto;
@@ -948,17 +937,9 @@ nav {
     background: none;
     left: 0;
     display: flex;
-    padding: 0;
   }
 
-}
-
-/* Kada je dark mode aktivan */
-body.dark-mode .logo {
-  color: white;
-}
-
-/* Kada je light mode aktivan */
-body.light-mode .logo {
-  color: black;
+  #menuToggle {
+    display: none;
+  }
 }
