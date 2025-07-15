@@ -981,4 +981,66 @@ body.dark-mode #navLinks a {
   #menuToggle.hide {
     display: none;
   }
+
+  /* Meni sakriven po defaultu */
+#navLinks {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: var(--nav-bg, #fff);
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+/* Meni otvoren */
+#navLinks.active {
+  left: 0;
+}
+
+/* Overlay tamna pozadina */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+
+/* Prikaži overlay kada je aktivan */
+#overlay.active {
+  display: block;
+}
+
+/* Sakrij dugme kad je meni otvoren */
+#menuToggle.hidden {
+  display: none;
+}
+
+/* Desktop verzija – vrati sve u normalu */
+@media (min-width: 768px) {
+  #navLinks {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  #overlay {
+    display: none !important;
+  }
+
+  #menuToggle {
+    display: none; /* jer ti ionako ne treba na desktopu */
+  }
+}
+
 }
