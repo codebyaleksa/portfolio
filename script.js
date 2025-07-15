@@ -278,11 +278,13 @@ const overlay = document.getElementById("overlay");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   overlay.classList.toggle("active");
+  menuToggle.classList.remove("hide"); // <- vratimo dugme kad zatvorimo meni
 });
 
 overlay.addEventListener("click", () => {
   navLinks.classList.remove("active");
   overlay.classList.remove("active");
+  menuToggle.classList.remove("hide"); // <- vratimo dugme kad zatvorimo meni
 });
 
 
