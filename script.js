@@ -82,7 +82,7 @@ const translations = {
     'label-language': 'Izaberite jezik'
   },
   en: {
-    'nav-home': 'Home',
+    'bx bx-home': 'Home',
     'nav-about': 'About',
     'nav-services': 'Services',
     'nav-portfolio': 'Portfolio',
