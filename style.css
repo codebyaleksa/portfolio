@@ -815,6 +815,12 @@ body.light-mode footer {
   background-color: var(--nav-bg, #fff); /* ili tamna boja za dark mode */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
+:root {
+  --nav-bg: #ffffff;
+}
+body.dark-mode {
+  --nav-bg: #111;
+}
 
   .logo {
     text-align: center;
