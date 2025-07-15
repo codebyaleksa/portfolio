@@ -55,7 +55,7 @@ body.light-mode nav {
 .logo {
   font-weight: 700;
   font-size: 1.8rem;
-  margin-left: 20px;
+  margin-left: -110px;
   cursor: pointer;
   user-select: none;
 }
@@ -974,5 +974,3 @@ body.dark-mode #navLinks a {
   color: #fff;
 }
 }
-
-
