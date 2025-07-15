@@ -952,3 +952,13 @@ nav {
   }
 
 }
+
+/* Kada je dark mode aktivan */
+body.dark-mode .logo {
+  color: white;
+}
+
+/* Kada je light mode aktivan */
+body.light-mode .logo {
+  color: black;
+}
