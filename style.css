@@ -846,9 +846,7 @@ body.light-mode footer {
   #navLinks.show {
     display: flex;
   }
-}
-
-body.light-mode #navLinks {
+  body.light-mode #navLinks {
   background: #f5f9fd;
   color: #000000;
 }
@@ -975,3 +973,6 @@ body.dark-mode #navLinks {
 body.dark-mode #navLinks a {
   color: #fff;
 }
+}
+
+
