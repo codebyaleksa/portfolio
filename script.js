@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
-    menuToggle.style.display = navLinks.classList.contains('active') ? 'none' : 'block';
+    menuToggle.classList.toggle('hidden'); // koristi klasu hidden za sakrivanje dugmeta
   });
 
   // Zatvori meni klikom van menija (overlay)
   overlay.addEventListener('click', () => {
     navLinks.classList.remove('active');
     overlay.classList.remove('active');
-    menuToggle.style.display = 'block';
+    menuToggle.classList.remove('hidden');
   });
 
   // Zatvori meni kada klikneš na neki link
@@ -24,31 +24,34 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
       overlay.classList.remove('active');
-      menuToggle.style.display = 'block';
+      menuToggle.classList.remove('hidden');
     });
   });
 
   // Tema: tamna/svetla
   function setTheme(mode) {
     if (mode === 'dark') {
-      document.body.classList.add('dark');
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.body.classList.remove('dark');
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
       localStorage.setItem('theme', 'light');
     }
   }
 
   themeToggle.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    if (document.body.classList.contains('dark-mode')) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
   });
 
   // Učitaj temu iz localStorage
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  }
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
 
   // Prevod jezika
   const translations = {
